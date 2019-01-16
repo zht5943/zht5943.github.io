@@ -1,0 +1,243 @@
+ /*隔离区*/
+ a{
+ 	color: #333;
+	text-decoration: none;
+ }
+ a:hover{
+ 	text-decoration: none;
+ }
+ .ml-10 {
+	margin-left: 10px;
+}
+ @font-face{
+ 	font-family: 'cxk';
+ 	src:
+		url(../fonts/MiFie-Web-Font.eot) format('embedded-opentype'),
+		url(../fonts/MiFie-Web-Font.svg) format('svg'),
+		url(../fonts/MiFie-Web-Font.ttf) format('truetype'),
+		url(../fonts/MiFie-Web-Font.woff) format('woff')
+ }
+ .iconfont{
+ 	font-family: 'feifei';
+	font-size: 16px;
+ }
+ .wjs-icons-mobile:before {
+	content: "\e908";
+}
+/*.wjs-icons-tel:before {
+	content: '\e909';
+}*/
+/*.wjs-icons-logo1:before {
+    content: "\e920";
+    font-size: 40px;
+    color: #E92322;
+}
+.wjs-icons-logo2:before {
+	content: "\e93e";
+    font-size: 36px;
+}*/
+.wjs-text{
+	font-size: 36px;
+}
+
+/*头部*/
+.wjs-header{
+	
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	box-shadow: 0 1px 1px rgba(0,0,0,.1);
+}
+.wjs-header .btn{
+	padding: 2px 3px;
+}
+.wjs-header .row > div {
+	border-left: 1px solid #ccc;
+}
+.wjs-header .row > div:nth-child(1){
+	border:none;
+}
+.wjs-header .row > div span {
+	line-height: 1;
+}
+
+/*导航*/
+.wjs-nav  .navbar-default {
+	background-color: #fff;
+}
+.wjs-nav  .navbar {
+	margin-bottom: 0;
+}
+.wjs-nav .navbar-brand {
+	height: 80px;
+	line-height: 50px;
+}
+.wjs-nav .navbar-nav>li>a {
+	line-height: 50px;
+	height: 80px;
+}
+.wjs-nav .navbar-default .navbar-nav>.active>a {
+	background-color: #fff;
+	border-bottom: 2px solid #E92322;
+}
+.wjs-nav .navbar-default .navbar-nav>li>a:hover {
+	border-bottom: 2px solid #E92322;
+}
+.wjs-nav .navbar-toggle {
+	margin-top: 24px;
+}
+
+/*轮播图*/
+.carousel-inner>.item{
+	height: 410px;
+	overflow: hidden;
+}
+.carousel-inner>.item>img {
+	height: 410px;
+	max-width: none;
+	position: absolute;
+	left: 50%;
+	margin-left: -1000px;
+}
+
+/*支付模块*/
+.wjs-pay{
+	padding:50px 0;
+}
+.wjs-pay .row>div{
+	margin:15px 0;
+}
+.wjs-pay .row .media .media-left span{
+	font-size: 40px;
+}
+/*预约模块*/
+.wjs-book{
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	padding:15px;
+}
+/*产品模块*/
+.wjs-product {
+	padding:50px 0;
+	background-color: #f0f0f0;
+}
+.wjs-product .ul-box {
+	overflow: auto;
+}
+.wjs-product #scrollwrap {
+	/* 这个宽度在JS动态计算 */
+	width: 1000px;
+}
+.wjs-product .nav-tabs>li.active>a {
+	background-color: transparent;
+	border: 1px solid transparent;
+	border-bottom: 2px solid #E92322;
+	/*问题：加了两像素底边框，多出两像素点击会出现跳动效果
+	解决：将其余边框设为透明*/
+}
+.wjs-product .tab-pane {
+	overflow: hidden;
+	/*隐藏大盒子通过奇淫技巧多出的15像素外边距*/
+}
+.wjs-product .tab-pane > .row > div {
+	height: 160px;
+	margin-top: 15px;
+}
+.wjs-product .tab-pane > .row > div .content {
+	height: 100%;
+	background-color: #fff;
+}
+.wjs-product .tab-pane > .row > div .content .right {
+	width: 120px;
+	height: 160px;
+	text-align: center;
+	border-left: 1px dashed #ccc;
+	position: relative;
+}
+.wjs-product .tab-pane > .row > div .content .right:before,
+.wjs-product .tab-pane > .row > div .content .right:after{
+	content: '';
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #f0f0f0;
+	position: absolute;
+	left: -10px;
+}
+.wjs-product .tab-pane > .row > div .content .right:before {
+	top: -10px;
+}
+.wjs-product .tab-pane > .row > div .content .right:after{
+	bottom: -10px;
+}
+.wjs-product .tab-pane > .row > div .content .right p:nth-child(1){
+	height: 50px;
+	line-height: 50px;
+	margin-top: 45px;
+}
+.fs-40 {
+	font-size: 40px;
+}
+.wjs-product .tab-pane > .row > div .content .left {
+	margin-right: 120px;
+	height: 160px;
+	overflow: hidden;
+	/*margin-top外边距合并导致高度塌陷，overflow: hidden触发bfc，隔离出独立区域，内外互相不影响*/
+}
+.wjs-product .tab-pane > .row > div .content .left p{
+	margin-bottom: 5px;
+}
+.wjs-product .tab-pane > .row > div .content .left h3{
+	text-align: center;
+	font-size: 20px;
+}
+.wjs-product .tab-pane > .row > div .content.active {
+	background-color: #E92322;
+	color: #fff;
+}
+.experience {
+	position: relative;
+
+}
+/*新闻模块*/
+.wjs-news{
+	padding:50px 0;
+}
+.wjs-news h3 {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin-top: 0;
+	font-size: 18px;
+	border-bottom: 1px dashed #ccc;
+	position: relative;
+}
+.wjs-news h3:before {
+	content: '';
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	position: absolute;
+	right: -5px;
+	bottom: -5px;
+	background-color: #fff;
+	border:1px solid #ccc;
+}
+.wjs-news .nav-pills li {
+	margin-bottom: 15px;
+}
+.wjs-news .nav-pills li a {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin:0 auto;
+	text-align: center;
+	line-height: 50px;
+}
+@media(max-width:992px){
+	.wjs-news .nav-pills li{
+		float: left;
+		width: 25%;
+	}
+}
